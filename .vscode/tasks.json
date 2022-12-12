@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Go GraphQL model",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceFolder}/server",
+      },
+      "command": "go",
+      "args": ["generate", "./..."],
+      "group": "build"
+    }
+  ]
+}
