@@ -1,0 +1,18 @@
+# Query and Mutation MUST BE DEFINED IN THIS FILE AND NOWHERE ELSE
+# because gqlgen derives its output filename from this file's name 
+
+# Special type which defines all root queries
+type Query {
+  todos: [Todo!]!
+  todos2: [Todo!]!
+}
+
+# Special type which defines all root mutations
+type Mutation {
+  createTodo(input: NewTodo!): Todo!
+}
+
+input NewTodo {
+  text: String!
+  userId: String!
+}

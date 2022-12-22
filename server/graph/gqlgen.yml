@@ -1,0 +1,13 @@
+schema:
+  - complete_schema.gql
+exec:
+  filename: exec.go
+  package: graph
+model:
+  filename: models.go
+  package: graph
+resolver:
+  layout: follow-schema
+  dir: .
+  package: graph
+  filename_template: resolvers.go

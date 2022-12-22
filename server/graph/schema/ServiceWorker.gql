@@ -1,0 +1,4 @@
+type ServiceWorker {
+  id: ID!
+  name: String!
+}
