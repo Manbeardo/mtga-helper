@@ -1,3 +1,7 @@
-go 1.18
+go 1.19
 
-use ./server
+replace golang.org/x/sys v0.3.0 => github.com/Manbeardo/golang-x-sys v0.3.0-relative-path
+
+use (
+	./server
+)
