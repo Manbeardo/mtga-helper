@@ -1,9 +1,18 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_binary(
-  name = "server",
-  srcs = ["server.go"],
-  deps = [
-    "//server/graph",
-  ]
+    name = "server",
+    embed = [":server_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "server_lib",
+    srcs = ["server.go"],
+    importpath = "github.com/Manbeardo/mtga-helper/server",
+    visibility = ["//visibility:private"],
+    deps = [
+        "@com_github_99designs_gqlgen//graphql/handler",
+        "@com_github_99designs_gqlgen//graphql/playground",
+    ],
 )

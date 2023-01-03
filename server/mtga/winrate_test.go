@@ -9,7 +9,7 @@ import (
 func TestSimulateEvents(t *testing.T) {
 	cfg := EventSimulationConfig{
 		Format:                  formats.PremierDraft(),
-		GameWinRate:             0.70,
+		GameWinRate:             0.567,
 		PerEventWinRateVariance: 0.05,
 	}
 	result := SimulateEvents(cfg, 100000)

@@ -1,4 +1,4 @@
-module github.com/Manbeardo/mtga-helper
+module github.com/Manbeardo/mtga-helper/server
 
 go 1.19
 

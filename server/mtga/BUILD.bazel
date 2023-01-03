@@ -1,0 +1,22 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "mtga",
+    srcs = [
+        "event_kind.go",
+        "winrate.go",
+    ],
+    importpath = "github.com/Manbeardo/mtga-helper/server/mtga",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//server/mtga/formats",
+        "//server/mtga/sets",
+    ],
+)
+
+go_test(
+    name = "mtga_test",
+    srcs = ["winrate_test.go"],
+    embed = [":mtga"],
+    deps = ["//server/mtga/formats"],
+)

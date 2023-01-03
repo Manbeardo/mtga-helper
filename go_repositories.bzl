@@ -233,8 +233,9 @@ def go_repositories():
     go_repository(
         name = "org_golang_x_sys",
         importpath = "golang.org/x/sys",
-        sum = "h1:2QkjZIsXupsJbJIdSjjUOgWK3aEtzyuh2mPt3l/CkeU=",
-        version = "v0.0.0-20220811171246-fbc7d0a398ab",
+        replace = "github.com/Manbeardo/golang-x-sys",
+        sum = "h1:0BZtTqupkOdEkabsPwRScv6nBSqO4D/khH7vthAdlbM=",
+        version = "v0.3.0-relative-path",
     )
     go_repository(
         name = "org_golang_x_term",
